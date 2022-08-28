@@ -20,10 +20,10 @@ def main():
             break
     
     # create the link to the csv
-    download_site = url_download + download
+    connector = f'{url_download}{download}'
 
     # Turn the csv file into a dataframe
-    csv_df = pd.read_csv(download_site, header= 0)
+    csv_df = pd.read_csv(connector, header= 0)
 
     #  find the max valyue in HourlyDryBulbTemperature col and return the records    
     print(csv_df.iloc[csv_df['HourlyDryBulbTemperature'].idxmax()])
