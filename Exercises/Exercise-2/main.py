@@ -1,7 +1,6 @@
 import pandas as pd
 from requests import get
 from bs4 import BeautifulSoup as bs
-import io
 
 
 # assign the url 
@@ -30,10 +29,6 @@ def main():
     print(csv_df.iloc[csv_df['HourlyDryBulbTemperature'].idxmax()])
     print(csv_df.query('HourlyDryBulbTemperature == HourlyDryBulbTemperature.max()'))
     print(csv_df.nlargest(1,['HourlyDryBulbTemperature']))
-
-    
-
-
     
 
 
